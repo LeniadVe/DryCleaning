@@ -1,0 +1,2237 @@
+id: DryCleaning
+language: CSharp
+name:
+  Default: DryCleaning
+qualifiedName:
+  Default: DryCleaning
+type: Assembly
+modifiers: {}
+items:
+- id: DryCleaning.Controllers
+  commentId: N:DryCleaning.Controllers
+  language: CSharp
+  name:
+    CSharp: DryCleaning.Controllers
+    VB: DryCleaning.Controllers
+  nameWithType:
+    CSharp: DryCleaning.Controllers
+    VB: DryCleaning.Controllers
+  qualifiedName:
+    CSharp: DryCleaning.Controllers
+    VB: DryCleaning.Controllers
+  type: Namespace
+  assemblies:
+  - DryCleaning
+  modifiers: {}
+  items:
+  - id: DryCleaning.Controllers.ShopController
+    commentId: T:DryCleaning.Controllers.ShopController
+    language: CSharp
+    name:
+      CSharp: ShopController
+      VB: ShopController
+    nameWithType:
+      CSharp: ShopController
+      VB: ShopController
+    qualifiedName:
+      CSharp: DryCleaning.Controllers.ShopController
+      VB: DryCleaning.Controllers.ShopController
+    type: Class
+    assemblies:
+    - DryCleaning
+    namespace: DryCleaning.Controllers
+    source:
+      remote:
+        path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/Controllers/ShopController.cs
+      id: ShopController
+      path: ../DryCleaning/Controllers/ShopController.cs
+      startLine: 11
+    summary: "\nAPI Controller for managing shop schedules, including setting open/close hours and calculating service completion times.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: >-
+          [ApiController]
+
+          public class ShopController
+        VB: >-
+          <ApiController>
+
+          Public Class ShopController
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    attributes:
+    - type: Microsoft.AspNetCore.Mvc.ApiControllerAttribute
+      ctor: Microsoft.AspNetCore.Mvc.ApiControllerAttribute.#ctor
+      arguments: []
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items: []
+- id: DryCleaning.DTO
+  commentId: N:DryCleaning.DTO
+  language: CSharp
+  name:
+    CSharp: DryCleaning.DTO
+    VB: DryCleaning.DTO
+  nameWithType:
+    CSharp: DryCleaning.DTO
+    VB: DryCleaning.DTO
+  qualifiedName:
+    CSharp: DryCleaning.DTO
+    VB: DryCleaning.DTO
+  type: Namespace
+  assemblies:
+  - DryCleaning
+  modifiers: {}
+  items:
+  - id: DryCleaning.DTO.Shop
+    commentId: T:DryCleaning.DTO.Shop
+    language: CSharp
+    name:
+      CSharp: Shop
+      VB: Shop
+    nameWithType:
+      CSharp: Shop
+      VB: Shop
+    qualifiedName:
+      CSharp: DryCleaning.DTO.Shop
+      VB: DryCleaning.DTO.Shop
+    type: Class
+    assemblies:
+    - DryCleaning
+    namespace: DryCleaning.DTO
+    source:
+      remote:
+        path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/DTO/Shop.cs
+      id: Shop
+      path: ../DryCleaning/DTO/Shop.cs
+      startLine: 4
+    syntax:
+      content:
+        CSharp: public class Shop
+        VB: Public Class Shop
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: DryCleaning.DTO.Shop.Week
+      commentId: P:DryCleaning.DTO.Shop.Week
+      language: CSharp
+      name:
+        CSharp: Week
+        VB: Week
+      nameWithType:
+        CSharp: Shop.Week
+        VB: Shop.Week
+      qualifiedName:
+        CSharp: DryCleaning.DTO.Shop.Week
+        VB: DryCleaning.DTO.Shop.Week
+      type: Property
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.DTO
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/DTO/Shop.cs
+        id: Week
+        path: ../DryCleaning/DTO/Shop.cs
+        startLine: 6
+      syntax:
+        content:
+          CSharp: public ConcurrentDictionary<DayOfWeek, WorkHours> Week { get; set; }
+          VB: Public Property Week As ConcurrentDictionary(Of DayOfWeek, WorkHours)
+        parameters: []
+        return:
+          type: System.Collections.Concurrent.ConcurrentDictionary{DayOfWeek,DryCleaning.DTO.WorkHours}
+      overload: DryCleaning.DTO.Shop.Week*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: DryCleaning.DTO.Shop.Dates
+      commentId: P:DryCleaning.DTO.Shop.Dates
+      language: CSharp
+      name:
+        CSharp: Dates
+        VB: Dates
+      nameWithType:
+        CSharp: Shop.Dates
+        VB: Shop.Dates
+      qualifiedName:
+        CSharp: DryCleaning.DTO.Shop.Dates
+        VB: DryCleaning.DTO.Shop.Dates
+      type: Property
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.DTO
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/DTO/Shop.cs
+        id: Dates
+        path: ../DryCleaning/DTO/Shop.cs
+        startLine: 8
+      syntax:
+        content:
+          CSharp: public ConcurrentDictionary<DateOnly, WorkHours> Dates { get; set; }
+          VB: Public Property Dates As ConcurrentDictionary(Of DateOnly, WorkHours)
+        parameters: []
+        return:
+          type: System.Collections.Concurrent.ConcurrentDictionary{DateOnly,DryCleaning.DTO.WorkHours}
+      overload: DryCleaning.DTO.Shop.Dates*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: DryCleaning.DTO.Shop.#ctor
+      commentId: M:DryCleaning.DTO.Shop.#ctor
+      language: CSharp
+      name:
+        CSharp: Shop()
+        VB: Shop()
+      nameWithType:
+        CSharp: Shop.Shop()
+        VB: Shop.Shop()
+      qualifiedName:
+        CSharp: DryCleaning.DTO.Shop.Shop()
+        VB: DryCleaning.DTO.Shop.Shop()
+      type: Constructor
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.DTO
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/DTO/Shop.cs
+        id: .ctor
+        path: ../DryCleaning/DTO/Shop.cs
+        startLine: 10
+      syntax:
+        content:
+          CSharp: public Shop()
+          VB: Public Sub New
+      overload: DryCleaning.DTO.Shop.#ctor*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: DryCleaning.DTO.WorkHours
+    commentId: T:DryCleaning.DTO.WorkHours
+    language: CSharp
+    name:
+      CSharp: WorkHours
+      VB: WorkHours
+    nameWithType:
+      CSharp: WorkHours
+      VB: WorkHours
+    qualifiedName:
+      CSharp: DryCleaning.DTO.WorkHours
+      VB: DryCleaning.DTO.WorkHours
+    type: Class
+    assemblies:
+    - DryCleaning
+    namespace: DryCleaning.DTO
+    source:
+      remote:
+        path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/DTO/WorkHours.cs
+      id: WorkHours
+      path: ../DryCleaning/DTO/WorkHours.cs
+      startLine: 2
+    syntax:
+      content:
+        CSharp: public class WorkHours
+        VB: Public Class WorkHours
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: DryCleaning.DTO.WorkHours.Open
+      commentId: P:DryCleaning.DTO.WorkHours.Open
+      language: CSharp
+      name:
+        CSharp: Open
+        VB: Open
+      nameWithType:
+        CSharp: WorkHours.Open
+        VB: WorkHours.Open
+      qualifiedName:
+        CSharp: DryCleaning.DTO.WorkHours.Open
+        VB: DryCleaning.DTO.WorkHours.Open
+      type: Property
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.DTO
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/DTO/WorkHours.cs
+        id: Open
+        path: ../DryCleaning/DTO/WorkHours.cs
+        startLine: 4
+      syntax:
+        content:
+          CSharp: public TimeOnly? Open { get; set; }
+          VB: Public Property Open As TimeOnly?
+        parameters: []
+        return:
+          type: System.Nullable{TimeOnly}
+      overload: DryCleaning.DTO.WorkHours.Open*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: DryCleaning.DTO.WorkHours.Close
+      commentId: P:DryCleaning.DTO.WorkHours.Close
+      language: CSharp
+      name:
+        CSharp: Close
+        VB: Close
+      nameWithType:
+        CSharp: WorkHours.Close
+        VB: WorkHours.Close
+      qualifiedName:
+        CSharp: DryCleaning.DTO.WorkHours.Close
+        VB: DryCleaning.DTO.WorkHours.Close
+      type: Property
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.DTO
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/DTO/WorkHours.cs
+        id: Close
+        path: ../DryCleaning/DTO/WorkHours.cs
+        startLine: 5
+      syntax:
+        content:
+          CSharp: public TimeOnly? Close { get; set; }
+          VB: Public Property Close As TimeOnly?
+        parameters: []
+        return:
+          type: System.Nullable{TimeOnly}
+      overload: DryCleaning.DTO.WorkHours.Close*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+- id: DryCleaning.Helper
+  commentId: N:DryCleaning.Helper
+  language: CSharp
+  name:
+    CSharp: DryCleaning.Helper
+    VB: DryCleaning.Helper
+  nameWithType:
+    CSharp: DryCleaning.Helper
+    VB: DryCleaning.Helper
+  qualifiedName:
+    CSharp: DryCleaning.Helper
+    VB: DryCleaning.Helper
+  type: Namespace
+  assemblies:
+  - DryCleaning
+  modifiers: {}
+  items:
+  - id: DryCleaning.Helper.DateHelper
+    commentId: T:DryCleaning.Helper.DateHelper
+    language: CSharp
+    name:
+      CSharp: DateHelper
+      VB: DateHelper
+    nameWithType:
+      CSharp: DateHelper
+      VB: DateHelper
+    qualifiedName:
+      CSharp: DryCleaning.Helper.DateHelper
+      VB: DryCleaning.Helper.DateHelper
+    type: Class
+    assemblies:
+    - DryCleaning
+    namespace: DryCleaning.Helper
+    source:
+      remote:
+        path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/Helper/DateHelper.cs
+      id: DateHelper
+      path: ../DryCleaning/Helper/DateHelper.cs
+      startLine: 2
+    syntax:
+      content:
+        CSharp: public class DateHelper
+        VB: Public Class DateHelper
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: DryCleaning.Helper.DateHelper.DateTimeToDateAndHours(DateTime)
+      commentId: M:DryCleaning.Helper.DateHelper.DateTimeToDateAndHours(DateTime)
+      language: CSharp
+      name:
+        CSharp: DateTimeToDateAndHours(DateTime)
+        VB: DateTimeToDateAndHours(DateTime)
+      nameWithType:
+        CSharp: DateHelper.DateTimeToDateAndHours(DateTime)
+        VB: DateHelper.DateTimeToDateAndHours(DateTime)
+      qualifiedName:
+        CSharp: DryCleaning.Helper.DateHelper.DateTimeToDateAndHours(DateTime)
+        VB: DryCleaning.Helper.DateHelper.DateTimeToDateAndHours(DateTime)
+      type: Method
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.Helper
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/Helper/DateHelper.cs
+        id: DateTimeToDateAndHours
+        path: ../DryCleaning/Helper/DateHelper.cs
+        startLine: 4
+      syntax:
+        content:
+          CSharp: public static (DateOnly, TimeOnly) DateTimeToDateAndHours(DateTime dateTime)
+          VB: Public Shared Function DateTimeToDateAndHours(dateTime As DateTime) As(DateOnly, TimeOnly)(Of DateOnly , TimeOnly)
+        parameters:
+        - id: dateTime
+          type: DateTime
+        return:
+          type: System.ValueTuple{DateOnly,TimeOnly}
+      overload: DryCleaning.Helper.DateHelper.DateTimeToDateAndHours*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+- id: DryCleaning.Service
+  commentId: N:DryCleaning.Service
+  language: CSharp
+  name:
+    CSharp: DryCleaning.Service
+    VB: DryCleaning.Service
+  nameWithType:
+    CSharp: DryCleaning.Service
+    VB: DryCleaning.Service
+  qualifiedName:
+    CSharp: DryCleaning.Service
+    VB: DryCleaning.Service
+  type: Namespace
+  assemblies:
+  - DryCleaning
+  modifiers: {}
+  items:
+  - id: DryCleaning.Service.ShopService
+    commentId: T:DryCleaning.Service.ShopService
+    language: CSharp
+    name:
+      CSharp: ShopService
+      VB: ShopService
+    nameWithType:
+      CSharp: ShopService
+      VB: ShopService
+    qualifiedName:
+      CSharp: DryCleaning.Service.ShopService
+      VB: DryCleaning.Service.ShopService
+    type: Class
+    assemblies:
+    - DryCleaning
+    namespace: DryCleaning.Service
+    source:
+      remote:
+        path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/Service/ShopService.cs
+      id: ShopService
+      path: ../DryCleaning/Service/ShopService.cs
+      startLine: 8
+    syntax:
+      content:
+        CSharp: public class ShopService
+        VB: Public Class ShopService
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.ToString
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: DryCleaning.Service.ShopService.Get(System.Int32,DateTime)
+      commentId: M:DryCleaning.Service.ShopService.Get(System.Int32,DateTime)
+      language: CSharp
+      name:
+        CSharp: Get(Int32, DateTime)
+        VB: Get(Int32, DateTime)
+      nameWithType:
+        CSharp: ShopService.Get(Int32, DateTime)
+        VB: ShopService.Get(Int32, DateTime)
+      qualifiedName:
+        CSharp: DryCleaning.Service.ShopService.Get(System.Int32, DateTime)
+        VB: DryCleaning.Service.ShopService.Get(System.Int32, DateTime)
+      type: Method
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.Service
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/Service/ShopService.cs
+        id: Get
+        path: ../DryCleaning/Service/ShopService.cs
+        startLine: 21
+      summary: "\nCalculates the guaranteed completion date and time for a specified service duration, \nbased on business hours starting from the provided date and time.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public Result<string> Get(int minutes, DateTime startDate)
+          VB: Public Function Get(minutes As Integer, startDate As DateTime) As Result(Of String)
+        parameters:
+        - id: minutes
+          type: System.Int32
+          description: Duration in minutes for service completion.
+        - id: startDate
+          type: DateTime
+          description: The start date and time for calculating the completion date.
+        return:
+          type: LanguageExt.Common.Result{System.String}
+          description: A <see cref="!:Result&lt;string>"></see> containing the completion date and time formatted as &quot;ddd MMM dd HH:mm:ss yyyy&quot;.
+      overload: DryCleaning.Service.ShopService.Get*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: DryCleaning.Service.ShopService.UpdateWeek(DryCleaning.DTO.WorkHours,System.Nullable{List{DayOfWeek}})
+      commentId: M:DryCleaning.Service.ShopService.UpdateWeek(DryCleaning.DTO.WorkHours,System.Nullable{List{DayOfWeek}})
+      language: CSharp
+      name:
+        CSharp: UpdateWeek(WorkHours, Nullable<List<DayOfWeek>>)
+        VB: UpdateWeek(WorkHours, Nullable(Of List(Of DayOfWeek)))
+      nameWithType:
+        CSharp: ShopService.UpdateWeek(WorkHours, Nullable<List<DayOfWeek>>)
+        VB: ShopService.UpdateWeek(WorkHours, Nullable(Of List(Of DayOfWeek)))
+      qualifiedName:
+        CSharp: DryCleaning.Service.ShopService.UpdateWeek(DryCleaning.DTO.WorkHours, System.Nullable<List<DayOfWeek>>)
+        VB: DryCleaning.Service.ShopService.UpdateWeek(DryCleaning.DTO.WorkHours, System.Nullable(Of List(Of DayOfWeek)))
+      type: Method
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.Service
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/Service/ShopService.cs
+        id: UpdateWeek
+        path: ../DryCleaning/Service/ShopService.cs
+        startLine: 57
+      summary: "\nUpdates the business hours for specified days of the week, or all days if no specific days are provided.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public Result<bool> UpdateWeek(WorkHours newWorkHours = null, List<DayOfWeek>? days = null)
+          VB: Public Function UpdateWeek(newWorkHours As WorkHours = Nothing, days As List(Of DayOfWeek)? = Nothing) As Result(Of Boolean)
+        parameters:
+        - id: newWorkHours
+          type: DryCleaning.DTO.WorkHours
+          description: The new work hours to apply to the specified days.
+        - id: days
+          type: System.Nullable{List{DayOfWeek}}
+          description: The days of the week to update. Updates all days if <code>null</code>.
+        return:
+          type: LanguageExt.Common.Result{System.Boolean}
+          description: A <xref href="LanguageExt.Common.Result%601" data-throw-if-not-resolved="false"></xref> indicating whether the update was successful for all specified days.
+      overload: DryCleaning.Service.ShopService.UpdateWeek*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+      references:
+        LanguageExt.Common.Result`1: 
+    - id: DryCleaning.Service.ShopService.UpdateWorkingHours(DayOfWeek,DryCleaning.DTO.WorkHours)
+      commentId: M:DryCleaning.Service.ShopService.UpdateWorkingHours(DayOfWeek,DryCleaning.DTO.WorkHours)
+      language: CSharp
+      name:
+        CSharp: UpdateWorkingHours(DayOfWeek, WorkHours)
+        VB: UpdateWorkingHours(DayOfWeek, WorkHours)
+      nameWithType:
+        CSharp: ShopService.UpdateWorkingHours(DayOfWeek, WorkHours)
+        VB: ShopService.UpdateWorkingHours(DayOfWeek, WorkHours)
+      qualifiedName:
+        CSharp: DryCleaning.Service.ShopService.UpdateWorkingHours(DayOfWeek, DryCleaning.DTO.WorkHours)
+        VB: DryCleaning.Service.ShopService.UpdateWorkingHours(DayOfWeek, DryCleaning.DTO.WorkHours)
+      type: Method
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.Service
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/Service/ShopService.cs
+        id: UpdateWorkingHours
+        path: ../DryCleaning/Service/ShopService.cs
+        startLine: 74
+      summary: "\nUpdates the business hours for a specific day of the week in the store&apos;s schedule.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public Result<bool> UpdateWorkingHours(DayOfWeek dayOfWeek, WorkHours newWorkHours = null)
+          VB: Public Function UpdateWorkingHours(dayOfWeek As DayOfWeek, newWorkHours As WorkHours = Nothing) As Result(Of Boolean)
+        parameters:
+        - id: dayOfWeek
+          type: DayOfWeek
+          description: The day of the week to update.
+        - id: newWorkHours
+          type: DryCleaning.DTO.WorkHours
+          description: The new work hours for the specified day. If <code>null</code>, sets the day as closed.
+        return:
+          type: LanguageExt.Common.Result{System.Boolean}
+          description: A <xref href="LanguageExt.Common.Result%601" data-throw-if-not-resolved="false"></xref> indicating if the update was successful for the specified day.
+      overload: DryCleaning.Service.ShopService.UpdateWorkingHours*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+      references:
+        LanguageExt.Common.Result`1: 
+    - id: DryCleaning.Service.ShopService.UpdateWorkingHours(KeyValuePair{DayOfWeek,DryCleaning.DTO.WorkHours},DryCleaning.DTO.WorkHours)
+      commentId: M:DryCleaning.Service.ShopService.UpdateWorkingHours(KeyValuePair{DayOfWeek,DryCleaning.DTO.WorkHours},DryCleaning.DTO.WorkHours)
+      language: CSharp
+      name:
+        CSharp: UpdateWorkingHours(KeyValuePair<DayOfWeek, WorkHours>, WorkHours)
+        VB: UpdateWorkingHours(KeyValuePair(Of DayOfWeek, WorkHours), WorkHours)
+      nameWithType:
+        CSharp: ShopService.UpdateWorkingHours(KeyValuePair<DayOfWeek, WorkHours>, WorkHours)
+        VB: ShopService.UpdateWorkingHours(KeyValuePair(Of DayOfWeek, WorkHours), WorkHours)
+      qualifiedName:
+        CSharp: DryCleaning.Service.ShopService.UpdateWorkingHours(KeyValuePair<DayOfWeek, DryCleaning.DTO.WorkHours>, DryCleaning.DTO.WorkHours)
+        VB: DryCleaning.Service.ShopService.UpdateWorkingHours(KeyValuePair(Of DayOfWeek, DryCleaning.DTO.WorkHours), DryCleaning.DTO.WorkHours)
+      type: Method
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.Service
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/Service/ShopService.cs
+        id: UpdateWorkingHours
+        path: ../DryCleaning/Service/ShopService.cs
+        startLine: 83
+      summary: "\nUpdates the business hours for a given key-value pair representing a day and its current work hours.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public Result<bool> UpdateWorkingHours(KeyValuePair<DayOfWeek, WorkHours> day, WorkHours newWorkHours = null)
+          VB: Public Function UpdateWorkingHours(day As KeyValuePair(Of DayOfWeek, WorkHours), newWorkHours As WorkHours = Nothing) As Result(Of Boolean)
+        parameters:
+        - id: day
+          type: KeyValuePair{DayOfWeek,DryCleaning.DTO.WorkHours}
+          description: The day and its current work hours to update.
+        - id: newWorkHours
+          type: DryCleaning.DTO.WorkHours
+          description: The new work hours for the specified day. If <code>null</code>, sets the day as closed.
+        return:
+          type: LanguageExt.Common.Result{System.Boolean}
+          description: A <xref href="LanguageExt.Common.Result%601" data-throw-if-not-resolved="false"></xref> indicating if the update was successful.
+      overload: DryCleaning.Service.ShopService.UpdateWorkingHours*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+      references:
+        LanguageExt.Common.Result`1: 
+    - id: DryCleaning.Service.ShopService.AddDate(DateOnly,DryCleaning.DTO.WorkHours)
+      commentId: M:DryCleaning.Service.ShopService.AddDate(DateOnly,DryCleaning.DTO.WorkHours)
+      language: CSharp
+      name:
+        CSharp: AddDate(DateOnly, WorkHours)
+        VB: AddDate(DateOnly, WorkHours)
+      nameWithType:
+        CSharp: ShopService.AddDate(DateOnly, WorkHours)
+        VB: ShopService.AddDate(DateOnly, WorkHours)
+      qualifiedName:
+        CSharp: DryCleaning.Service.ShopService.AddDate(DateOnly, DryCleaning.DTO.WorkHours)
+        VB: DryCleaning.Service.ShopService.AddDate(DateOnly, DryCleaning.DTO.WorkHours)
+      type: Method
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.Service
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/Service/ShopService.cs
+        id: AddDate
+        path: ../DryCleaning/Service/ShopService.cs
+        startLine: 92
+      summary: "\nAdds or updates the business hours for a specific date in the store&apos;s calendar.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public Result<WorkHours> AddDate(DateOnly date, WorkHours workHours = null)
+          VB: Public Function AddDate(date As DateOnly, workHours As WorkHours = Nothing) As Result(Of WorkHours)
+        parameters:
+        - id: date
+          type: DateOnly
+          description: The specific date to add or update.
+        - id: workHours
+          type: DryCleaning.DTO.WorkHours
+          description: The work hours for the date. If <code>null</code>, the date is considered closed.
+        return:
+          type: LanguageExt.Common.Result{DryCleaning.DTO.WorkHours}
+          description: A <xref href="LanguageExt.Common.Result%601" data-throw-if-not-resolved="false"></xref> containing the added or updated <xref href="DryCleaning.DTO.WorkHours" data-throw-if-not-resolved="false"></xref> for the date.
+      overload: DryCleaning.Service.ShopService.AddDate*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+      references:
+        LanguageExt.Common.Result`1: 
+        DryCleaning.DTO.WorkHours: 
+    - id: DryCleaning.Service.ShopService.AddDates(List{DateOnly},DryCleaning.DTO.WorkHours)
+      commentId: M:DryCleaning.Service.ShopService.AddDates(List{DateOnly},DryCleaning.DTO.WorkHours)
+      language: CSharp
+      name:
+        CSharp: AddDates(List<DateOnly>, WorkHours)
+        VB: AddDates(List(Of DateOnly), WorkHours)
+      nameWithType:
+        CSharp: ShopService.AddDates(List<DateOnly>, WorkHours)
+        VB: ShopService.AddDates(List(Of DateOnly), WorkHours)
+      qualifiedName:
+        CSharp: DryCleaning.Service.ShopService.AddDates(List<DateOnly>, DryCleaning.DTO.WorkHours)
+        VB: DryCleaning.Service.ShopService.AddDates(List(Of DateOnly), DryCleaning.DTO.WorkHours)
+      type: Method
+      assemblies:
+      - DryCleaning
+      namespace: DryCleaning.Service
+      source:
+        remote:
+          path: C:/Users/amaya/OneDrive/Documentos/SQLI/DryCleaning/DryCleaning/Service/ShopService.cs
+        id: AddDates
+        path: ../DryCleaning/Service/ShopService.cs
+        startLine: 101
+      summary: "\nAdds or updates business hours for multiple specific dates in the store&apos;s calendar.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public Result<bool> AddDates(List<DateOnly> dates, WorkHours workHours = null)
+          VB: Public Function AddDates(dates As List(Of DateOnly), workHours As WorkHours = Nothing) As Result(Of Boolean)
+        parameters:
+        - id: dates
+          type: List{DateOnly}
+          description: A list of dates to add or update.
+        - id: workHours
+          type: DryCleaning.DTO.WorkHours
+          description: The work hours for each specified date. If <code>null</code>, each date is considered closed.
+        return:
+          type: LanguageExt.Common.Result{System.Boolean}
+          description: A <xref href="LanguageExt.Common.Result%601" data-throw-if-not-resolved="false"></xref> indicating whether all specified dates were successfully added or updated.
+      overload: DryCleaning.Service.ShopService.AddDates*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+      references:
+        LanguageExt.Common.Result`1: 
+references:
+  System:
+    name:
+      CSharp:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+        isExternal: true
+      VB:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+    isDefinition: true
+    commentId: N:System
+  System.Object:
+    name:
+      CSharp:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Object
+  System.Object.Equals(System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object)
+  System.Object.Equals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object,System.Object)
+  System.Object.GetHashCode:
+    name:
+      CSharp:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetHashCode
+  System.Object.GetType:
+    name:
+      CSharp:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetType
+  System.Object.MemberwiseClone:
+    name:
+      CSharp:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.MemberwiseClone
+  System.Object.ReferenceEquals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  System.Object.ToString:
+    name:
+      CSharp:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ToString
+  DryCleaning.Controllers.ShopController:
+    name:
+      CSharp:
+      - id: DryCleaning.Controllers.ShopController
+        name: ShopController
+        nameWithType: ShopController
+        qualifiedName: DryCleaning.Controllers.ShopController
+      VB:
+      - id: DryCleaning.Controllers.ShopController
+        name: ShopController
+        nameWithType: ShopController
+        qualifiedName: DryCleaning.Controllers.ShopController
+    isDefinition: true
+    commentId: T:DryCleaning.Controllers.ShopController
+  Microsoft.AspNetCore.Mvc:
+    name:
+      CSharp:
+      - name: Microsoft.AspNetCore.Mvc
+        nameWithType: Microsoft.AspNetCore.Mvc
+        qualifiedName: Microsoft.AspNetCore.Mvc
+        isExternal: true
+      VB:
+      - name: Microsoft.AspNetCore.Mvc
+        nameWithType: Microsoft.AspNetCore.Mvc
+        qualifiedName: Microsoft.AspNetCore.Mvc
+    isDefinition: true
+    commentId: N:Microsoft.AspNetCore.Mvc
+  Microsoft.AspNetCore.Mvc.ApiControllerAttribute:
+    name:
+      CSharp:
+      - id: Microsoft.AspNetCore.Mvc.ApiControllerAttribute
+        name: ApiControllerAttribute
+        nameWithType: ApiControllerAttribute
+        qualifiedName: Microsoft.AspNetCore.Mvc.ApiControllerAttribute
+        isExternal: true
+      VB:
+      - id: Microsoft.AspNetCore.Mvc.ApiControllerAttribute
+        name: ApiControllerAttribute
+        nameWithType: ApiControllerAttribute
+        qualifiedName: Microsoft.AspNetCore.Mvc.ApiControllerAttribute
+        isExternal: true
+    isDefinition: true
+    parent: Microsoft.AspNetCore.Mvc
+    commentId: T:Microsoft.AspNetCore.Mvc.ApiControllerAttribute
+  Microsoft.AspNetCore.Mvc.ApiControllerAttribute.#ctor:
+    name:
+      CSharp:
+      - id: Microsoft.AspNetCore.Mvc.ApiControllerAttribute.#ctor
+        name: ApiControllerAttribute
+        nameWithType: ApiControllerAttribute.ApiControllerAttribute
+        qualifiedName: Microsoft.AspNetCore.Mvc.ApiControllerAttribute.ApiControllerAttribute
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: Microsoft.AspNetCore.Mvc.ApiControllerAttribute.#ctor
+        name: ApiControllerAttribute
+        nameWithType: ApiControllerAttribute.ApiControllerAttribute
+        qualifiedName: Microsoft.AspNetCore.Mvc.ApiControllerAttribute.ApiControllerAttribute
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: Microsoft.AspNetCore.Mvc.ApiControllerAttribute
+    commentId: M:Microsoft.AspNetCore.Mvc.ApiControllerAttribute.#ctor
+  DryCleaning.Controllers:
+    name:
+      CSharp:
+      - name: DryCleaning.Controllers
+        nameWithType: DryCleaning.Controllers
+        qualifiedName: DryCleaning.Controllers
+      VB:
+      - name: DryCleaning.Controllers
+        nameWithType: DryCleaning.Controllers
+        qualifiedName: DryCleaning.Controllers
+    isDefinition: true
+    commentId: N:DryCleaning.Controllers
+  System.Collections.Concurrent.ConcurrentDictionary`2:
+    name:
+      CSharp:
+      - id: System.Collections.Concurrent.ConcurrentDictionary`2
+        name: ConcurrentDictionary
+        nameWithType: ConcurrentDictionary
+        qualifiedName: System.Collections.Concurrent.ConcurrentDictionary
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: TKey
+        nameWithType: TKey
+        qualifiedName: TKey
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: TValue
+        nameWithType: TValue
+        qualifiedName: TValue
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Concurrent.ConcurrentDictionary`2
+        name: ConcurrentDictionary
+        nameWithType: ConcurrentDictionary
+        qualifiedName: System.Collections.Concurrent.ConcurrentDictionary
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: TKey
+        nameWithType: TKey
+        qualifiedName: TKey
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: TValue
+        nameWithType: TValue
+        qualifiedName: TValue
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.Collections.Concurrent.ConcurrentDictionary`2
+  System.Collections.Concurrent:
+    name:
+      CSharp:
+      - name: System.Collections.Concurrent
+        nameWithType: System.Collections.Concurrent
+        qualifiedName: System.Collections.Concurrent
+        isExternal: true
+      VB:
+      - name: System.Collections.Concurrent
+        nameWithType: System.Collections.Concurrent
+        qualifiedName: System.Collections.Concurrent
+    isDefinition: true
+    commentId: N:System.Collections.Concurrent
+  System.Collections.Concurrent.ConcurrentDictionary{DayOfWeek,DryCleaning.DTO.WorkHours}:
+    name:
+      CSharp:
+      - id: System.Collections.Concurrent.ConcurrentDictionary`2
+        name: ConcurrentDictionary
+        nameWithType: ConcurrentDictionary
+        qualifiedName: System.Collections.Concurrent.ConcurrentDictionary
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: DayOfWeek
+        name: DayOfWeek
+        nameWithType: DayOfWeek
+        qualifiedName: DayOfWeek
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: DryCleaning.DTO.WorkHours
+        name: WorkHours
+        nameWithType: WorkHours
+        qualifiedName: DryCleaning.DTO.WorkHours
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Concurrent.ConcurrentDictionary`2
+        name: ConcurrentDictionary
+        nameWithType: ConcurrentDictionary
+        qualifiedName: System.Collections.Concurrent.ConcurrentDictionary
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: DayOfWeek
+        name: DayOfWeek
+        nameWithType: DayOfWeek
+        qualifiedName: DayOfWeek
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: DryCleaning.DTO.WorkHours
+        name: WorkHours
+        nameWithType: WorkHours
+        qualifiedName: DryCleaning.DTO.WorkHours
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Collections.Concurrent.ConcurrentDictionary`2
+    parent: System.Collections.Concurrent
+    commentId: T:System.Collections.Concurrent.ConcurrentDictionary{DayOfWeek,DryCleaning.DTO.WorkHours}
+  DryCleaning.DTO.Shop.Week*:
+    name:
+      CSharp:
+      - id: DryCleaning.DTO.Shop.Week*
+        name: Week
+        nameWithType: Shop.Week
+        qualifiedName: DryCleaning.DTO.Shop.Week
+      VB:
+      - id: DryCleaning.DTO.Shop.Week*
+        name: Week
+        nameWithType: Shop.Week
+        qualifiedName: DryCleaning.DTO.Shop.Week
+    isDefinition: true
+    commentId: Overload:DryCleaning.DTO.Shop.Week
+  System.Collections.Concurrent.ConcurrentDictionary{DateOnly,DryCleaning.DTO.WorkHours}:
+    name:
+      CSharp:
+      - id: System.Collections.Concurrent.ConcurrentDictionary`2
+        name: ConcurrentDictionary
+        nameWithType: ConcurrentDictionary
+        qualifiedName: System.Collections.Concurrent.ConcurrentDictionary
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: DateOnly
+        name: DateOnly
+        nameWithType: DateOnly
+        qualifiedName: DateOnly
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: DryCleaning.DTO.WorkHours
+        name: WorkHours
+        nameWithType: WorkHours
+        qualifiedName: DryCleaning.DTO.WorkHours
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Concurrent.ConcurrentDictionary`2
+        name: ConcurrentDictionary
+        nameWithType: ConcurrentDictionary
+        qualifiedName: System.Collections.Concurrent.ConcurrentDictionary
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: DateOnly
+        name: DateOnly
+        nameWithType: DateOnly
+        qualifiedName: DateOnly
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: DryCleaning.DTO.WorkHours
+        name: WorkHours
+        nameWithType: WorkHours
+        qualifiedName: DryCleaning.DTO.WorkHours
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Collections.Concurrent.ConcurrentDictionary`2
+    parent: System.Collections.Concurrent
+    commentId: T:System.Collections.Concurrent.ConcurrentDictionary{DateOnly,DryCleaning.DTO.WorkHours}
+  DryCleaning.DTO.Shop.Dates*:
+    name:
+      CSharp:
+      - id: DryCleaning.DTO.Shop.Dates*
+        name: Dates
+        nameWithType: Shop.Dates
+        qualifiedName: DryCleaning.DTO.Shop.Dates
+      VB:
+      - id: DryCleaning.DTO.Shop.Dates*
+        name: Dates
+        nameWithType: Shop.Dates
+        qualifiedName: DryCleaning.DTO.Shop.Dates
+    isDefinition: true
+    commentId: Overload:DryCleaning.DTO.Shop.Dates
+  DryCleaning.DTO.Shop.#ctor*:
+    name:
+      CSharp:
+      - id: DryCleaning.DTO.Shop.#ctor*
+        name: Shop
+        nameWithType: Shop.Shop
+        qualifiedName: DryCleaning.DTO.Shop.Shop
+      VB:
+      - id: DryCleaning.DTO.Shop.#ctor*
+        name: Shop
+        nameWithType: Shop.Shop
+        qualifiedName: DryCleaning.DTO.Shop.Shop
+    isDefinition: true
+    commentId: Overload:DryCleaning.DTO.Shop.#ctor
+  DryCleaning.DTO.Shop:
+    name:
+      CSharp:
+      - id: DryCleaning.DTO.Shop
+        name: Shop
+        nameWithType: Shop
+        qualifiedName: DryCleaning.DTO.Shop
+      VB:
+      - id: DryCleaning.DTO.Shop
+        name: Shop
+        nameWithType: Shop
+        qualifiedName: DryCleaning.DTO.Shop
+    isDefinition: true
+    commentId: T:DryCleaning.DTO.Shop
+  System.Nullable`1:
+    name:
+      CSharp:
+      - id: System.Nullable`1
+        name: Nullable
+        nameWithType: Nullable
+        qualifiedName: System.Nullable
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Nullable`1
+        name: Nullable
+        nameWithType: Nullable
+        qualifiedName: System.Nullable
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.Nullable`1
+  System.Nullable{TimeOnly}:
+    name:
+      CSharp:
+      - id: System.Nullable`1
+        name: Nullable
+        nameWithType: Nullable
+        qualifiedName: System.Nullable
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: TimeOnly
+        name: TimeOnly
+        nameWithType: TimeOnly
+        qualifiedName: TimeOnly
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Nullable`1
+        name: Nullable
+        nameWithType: Nullable
+        qualifiedName: System.Nullable
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: TimeOnly
+        name: TimeOnly
+        nameWithType: TimeOnly
+        qualifiedName: TimeOnly
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Nullable`1
+    parent: System
+    commentId: T:System.Nullable{TimeOnly}
+  DryCleaning.DTO.WorkHours.Open*:
+    name:
+      CSharp:
+      - id: DryCleaning.DTO.WorkHours.Open*
+        name: Open
+        nameWithType: WorkHours.Open
+        qualifiedName: DryCleaning.DTO.WorkHours.Open
+      VB:
+      - id: DryCleaning.DTO.WorkHours.Open*
+        name: Open
+        nameWithType: WorkHours.Open
+        qualifiedName: DryCleaning.DTO.WorkHours.Open
+    isDefinition: true
+    commentId: Overload:DryCleaning.DTO.WorkHours.Open
+  DryCleaning.DTO.WorkHours.Close*:
+    name:
+      CSharp:
+      - id: DryCleaning.DTO.WorkHours.Close*
+        name: Close
+        nameWithType: WorkHours.Close
+        qualifiedName: DryCleaning.DTO.WorkHours.Close
+      VB:
+      - id: DryCleaning.DTO.WorkHours.Close*
+        name: Close
+        nameWithType: WorkHours.Close
+        qualifiedName: DryCleaning.DTO.WorkHours.Close
+    isDefinition: true
+    commentId: Overload:DryCleaning.DTO.WorkHours.Close
+  DryCleaning.DTO.WorkHours:
+    name:
+      CSharp:
+      - id: DryCleaning.DTO.WorkHours
+        name: WorkHours
+        nameWithType: WorkHours
+        qualifiedName: DryCleaning.DTO.WorkHours
+      VB:
+      - id: DryCleaning.DTO.WorkHours
+        name: WorkHours
+        nameWithType: WorkHours
+        qualifiedName: DryCleaning.DTO.WorkHours
+    isDefinition: true
+    parent: DryCleaning.DTO
+    commentId: T:DryCleaning.DTO.WorkHours
+  DryCleaning.DTO:
+    name:
+      CSharp:
+      - name: DryCleaning.DTO
+        nameWithType: DryCleaning.DTO
+        qualifiedName: DryCleaning.DTO
+      VB:
+      - name: DryCleaning.DTO
+        nameWithType: DryCleaning.DTO
+        qualifiedName: DryCleaning.DTO
+    isDefinition: true
+    commentId: N:DryCleaning.DTO
+  System.ValueTuple`2:
+    name:
+      CSharp:
+      - id: System.ValueTuple`2
+        name: (T1, T2)
+        nameWithType: (T1, T2)
+        qualifiedName: System.ValueTuple
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: T1
+        nameWithType: T1
+        qualifiedName: T1
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: T2
+        nameWithType: T2
+        qualifiedName: T2
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.ValueTuple`2
+        name: (T1, T2)
+        nameWithType: (T1, T2)
+        qualifiedName: System.ValueTuple
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: T1
+        nameWithType: T1
+        qualifiedName: T1
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: T2
+        nameWithType: T2
+        qualifiedName: T2
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.ValueTuple`2
+  System.ValueTuple{DateOnly,TimeOnly}:
+    name:
+      CSharp:
+      - id: System.ValueTuple`2
+        name: (T1, T2)
+        nameWithType: (T1, T2)
+        qualifiedName: System.ValueTuple
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: DateOnly
+        name: DateOnly
+        nameWithType: DateOnly
+        qualifiedName: DateOnly
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: TimeOnly
+        name: TimeOnly
+        nameWithType: TimeOnly
+        qualifiedName: TimeOnly
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.ValueTuple`2
+        name: (T1, T2)
+        nameWithType: (T1, T2)
+        qualifiedName: System.ValueTuple
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: DateOnly
+        name: DateOnly
+        nameWithType: DateOnly
+        qualifiedName: DateOnly
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: TimeOnly
+        name: TimeOnly
+        nameWithType: TimeOnly
+        qualifiedName: TimeOnly
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.ValueTuple`2
+    parent: System
+    commentId: T:System.ValueTuple{DateOnly,TimeOnly}
+  DateTime:
+    name:
+      CSharp:
+      - id: DateTime
+        name: DateTime
+        nameWithType: DateTime
+        qualifiedName: DateTime
+        isExternal: true
+      VB:
+      - id: DateTime
+        name: DateTime
+        nameWithType: DateTime
+        qualifiedName: DateTime
+        isExternal: true
+    isDefinition: true
+  DryCleaning.Helper.DateHelper.DateTimeToDateAndHours*:
+    name:
+      CSharp:
+      - id: DryCleaning.Helper.DateHelper.DateTimeToDateAndHours*
+        name: DateTimeToDateAndHours
+        nameWithType: DateHelper.DateTimeToDateAndHours
+        qualifiedName: DryCleaning.Helper.DateHelper.DateTimeToDateAndHours
+      VB:
+      - id: DryCleaning.Helper.DateHelper.DateTimeToDateAndHours*
+        name: DateTimeToDateAndHours
+        nameWithType: DateHelper.DateTimeToDateAndHours
+        qualifiedName: DryCleaning.Helper.DateHelper.DateTimeToDateAndHours
+    isDefinition: true
+    commentId: Overload:DryCleaning.Helper.DateHelper.DateTimeToDateAndHours
+  DryCleaning.Helper.DateHelper:
+    name:
+      CSharp:
+      - id: DryCleaning.Helper.DateHelper
+        name: DateHelper
+        nameWithType: DateHelper
+        qualifiedName: DryCleaning.Helper.DateHelper
+      VB:
+      - id: DryCleaning.Helper.DateHelper
+        name: DateHelper
+        nameWithType: DateHelper
+        qualifiedName: DryCleaning.Helper.DateHelper
+    isDefinition: true
+    commentId: T:DryCleaning.Helper.DateHelper
+  DryCleaning.Helper:
+    name:
+      CSharp:
+      - name: DryCleaning.Helper
+        nameWithType: DryCleaning.Helper
+        qualifiedName: DryCleaning.Helper
+      VB:
+      - name: DryCleaning.Helper
+        nameWithType: DryCleaning.Helper
+        qualifiedName: DryCleaning.Helper
+    isDefinition: true
+    commentId: N:DryCleaning.Helper
+  LanguageExt.Common.Result`1:
+    name:
+      CSharp:
+      - id: LanguageExt.Common.Result`1
+        name: Result
+        nameWithType: Result
+        qualifiedName: LanguageExt.Common.Result
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: A
+        nameWithType: A
+        qualifiedName: A
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: LanguageExt.Common.Result`1
+        name: Result
+        nameWithType: Result
+        qualifiedName: LanguageExt.Common.Result
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: A
+        nameWithType: A
+        qualifiedName: A
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:LanguageExt.Common.Result`1
+  LanguageExt.Common:
+    name:
+      CSharp:
+      - name: LanguageExt.Common
+        nameWithType: LanguageExt.Common
+        qualifiedName: LanguageExt.Common
+        isExternal: true
+      VB:
+      - name: LanguageExt.Common
+        nameWithType: LanguageExt.Common
+        qualifiedName: LanguageExt.Common
+    isDefinition: true
+    commentId: N:LanguageExt.Common
+  LanguageExt.Common.Result{System.String}:
+    name:
+      CSharp:
+      - id: LanguageExt.Common.Result`1
+        name: Result
+        nameWithType: Result
+        qualifiedName: LanguageExt.Common.Result
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: LanguageExt.Common.Result`1
+        name: Result
+        nameWithType: Result
+        qualifiedName: LanguageExt.Common.Result
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: LanguageExt.Common.Result`1
+    parent: LanguageExt.Common
+    commentId: T:LanguageExt.Common.Result{System.String}
+  System.Int32:
+    name:
+      CSharp:
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+      VB:
+      - id: System.Int32
+        name: Int32
+        nameWithType: Int32
+        qualifiedName: System.Int32
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Int32
+  DryCleaning.Service.ShopService.Get*:
+    name:
+      CSharp:
+      - id: DryCleaning.Service.ShopService.Get*
+        name: Get
+        nameWithType: ShopService.Get
+        qualifiedName: DryCleaning.Service.ShopService.Get
+      VB:
+      - id: DryCleaning.Service.ShopService.Get*
+        name: Get
+        nameWithType: ShopService.Get
+        qualifiedName: DryCleaning.Service.ShopService.Get
+    isDefinition: true
+    commentId: Overload:DryCleaning.Service.ShopService.Get
+  LanguageExt.Common.Result{System.Boolean}:
+    name:
+      CSharp:
+      - id: LanguageExt.Common.Result`1
+        name: Result
+        nameWithType: Result
+        qualifiedName: LanguageExt.Common.Result
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: LanguageExt.Common.Result`1
+        name: Result
+        nameWithType: Result
+        qualifiedName: LanguageExt.Common.Result
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: LanguageExt.Common.Result`1
+    parent: LanguageExt.Common
+    commentId: T:LanguageExt.Common.Result{System.Boolean}
+  System.Nullable{List{DayOfWeek}}:
+    name:
+      CSharp:
+      - id: System.Nullable`1
+        name: Nullable
+        nameWithType: Nullable
+        qualifiedName: System.Nullable
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: List`1
+        name: List
+        nameWithType: List
+        qualifiedName: List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: DayOfWeek
+        name: DayOfWeek
+        nameWithType: DayOfWeek
+        qualifiedName: DayOfWeek
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Nullable`1
+        name: Nullable
+        nameWithType: Nullable
+        qualifiedName: System.Nullable
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: List`1
+        name: List
+        nameWithType: List
+        qualifiedName: List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: DayOfWeek
+        name: DayOfWeek
+        nameWithType: DayOfWeek
+        qualifiedName: DayOfWeek
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Nullable`1
+    parent: System
+    commentId: T:System.Nullable{List{DayOfWeek}}
+  DryCleaning.Service.ShopService.UpdateWeek*:
+    name:
+      CSharp:
+      - id: DryCleaning.Service.ShopService.UpdateWeek*
+        name: UpdateWeek
+        nameWithType: ShopService.UpdateWeek
+        qualifiedName: DryCleaning.Service.ShopService.UpdateWeek
+      VB:
+      - id: DryCleaning.Service.ShopService.UpdateWeek*
+        name: UpdateWeek
+        nameWithType: ShopService.UpdateWeek
+        qualifiedName: DryCleaning.Service.ShopService.UpdateWeek
+    isDefinition: true
+    commentId: Overload:DryCleaning.Service.ShopService.UpdateWeek
+  DayOfWeek:
+    name:
+      CSharp:
+      - id: DayOfWeek
+        name: DayOfWeek
+        nameWithType: DayOfWeek
+        qualifiedName: DayOfWeek
+        isExternal: true
+      VB:
+      - id: DayOfWeek
+        name: DayOfWeek
+        nameWithType: DayOfWeek
+        qualifiedName: DayOfWeek
+        isExternal: true
+    isDefinition: true
+    commentId: '!:DayOfWeek'
+  DryCleaning.Service.ShopService.UpdateWorkingHours*:
+    name:
+      CSharp:
+      - id: DryCleaning.Service.ShopService.UpdateWorkingHours*
+        name: UpdateWorkingHours
+        nameWithType: ShopService.UpdateWorkingHours
+        qualifiedName: DryCleaning.Service.ShopService.UpdateWorkingHours
+      VB:
+      - id: DryCleaning.Service.ShopService.UpdateWorkingHours*
+        name: UpdateWorkingHours
+        nameWithType: ShopService.UpdateWorkingHours
+        qualifiedName: DryCleaning.Service.ShopService.UpdateWorkingHours
+    isDefinition: true
+    commentId: Overload:DryCleaning.Service.ShopService.UpdateWorkingHours
+  KeyValuePair`2:
+    name:
+      CSharp:
+      - id: KeyValuePair`2
+        name: KeyValuePair
+        nameWithType: KeyValuePair
+        qualifiedName: KeyValuePair
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: KeyValuePair`2
+        name: KeyValuePair
+        nameWithType: KeyValuePair
+        qualifiedName: KeyValuePair
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: '!:KeyValuePair`2'
+  KeyValuePair{DayOfWeek,DryCleaning.DTO.WorkHours}:
+    name:
+      CSharp:
+      - id: KeyValuePair`2
+        name: KeyValuePair
+        nameWithType: KeyValuePair
+        qualifiedName: KeyValuePair
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: DayOfWeek
+        name: DayOfWeek
+        nameWithType: DayOfWeek
+        qualifiedName: DayOfWeek
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: DryCleaning.DTO.WorkHours
+        name: WorkHours
+        nameWithType: WorkHours
+        qualifiedName: DryCleaning.DTO.WorkHours
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: KeyValuePair`2
+        name: KeyValuePair
+        nameWithType: KeyValuePair
+        qualifiedName: KeyValuePair
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: DayOfWeek
+        name: DayOfWeek
+        nameWithType: DayOfWeek
+        qualifiedName: DayOfWeek
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: DryCleaning.DTO.WorkHours
+        name: WorkHours
+        nameWithType: WorkHours
+        qualifiedName: DryCleaning.DTO.WorkHours
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: KeyValuePair`2
+    commentId: '!:KeyValuePair{DayOfWeek,DryCleaning.DTO.WorkHours}'
+  LanguageExt.Common.Result{DryCleaning.DTO.WorkHours}:
+    name:
+      CSharp:
+      - id: LanguageExt.Common.Result`1
+        name: Result
+        nameWithType: Result
+        qualifiedName: LanguageExt.Common.Result
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: DryCleaning.DTO.WorkHours
+        name: WorkHours
+        nameWithType: WorkHours
+        qualifiedName: DryCleaning.DTO.WorkHours
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: LanguageExt.Common.Result`1
+        name: Result
+        nameWithType: Result
+        qualifiedName: LanguageExt.Common.Result
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: DryCleaning.DTO.WorkHours
+        name: WorkHours
+        nameWithType: WorkHours
+        qualifiedName: DryCleaning.DTO.WorkHours
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: LanguageExt.Common.Result`1
+    parent: LanguageExt.Common
+    commentId: T:LanguageExt.Common.Result{DryCleaning.DTO.WorkHours}
+  DateOnly:
+    name:
+      CSharp:
+      - id: DateOnly
+        name: DateOnly
+        nameWithType: DateOnly
+        qualifiedName: DateOnly
+        isExternal: true
+      VB:
+      - id: DateOnly
+        name: DateOnly
+        nameWithType: DateOnly
+        qualifiedName: DateOnly
+        isExternal: true
+    isDefinition: true
+    commentId: '!:DateOnly'
+  DryCleaning.Service.ShopService.AddDate*:
+    name:
+      CSharp:
+      - id: DryCleaning.Service.ShopService.AddDate*
+        name: AddDate
+        nameWithType: ShopService.AddDate
+        qualifiedName: DryCleaning.Service.ShopService.AddDate
+      VB:
+      - id: DryCleaning.Service.ShopService.AddDate*
+        name: AddDate
+        nameWithType: ShopService.AddDate
+        qualifiedName: DryCleaning.Service.ShopService.AddDate
+    isDefinition: true
+    commentId: Overload:DryCleaning.Service.ShopService.AddDate
+  List`1:
+    name:
+      CSharp:
+      - id: List`1
+        name: List
+        nameWithType: List
+        qualifiedName: List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: List`1
+        name: List
+        nameWithType: List
+        qualifiedName: List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: '!:List`1'
+  List{DateOnly}:
+    name:
+      CSharp:
+      - id: List`1
+        name: List
+        nameWithType: List
+        qualifiedName: List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: DateOnly
+        name: DateOnly
+        nameWithType: DateOnly
+        qualifiedName: DateOnly
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: List`1
+        name: List
+        nameWithType: List
+        qualifiedName: List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: DateOnly
+        name: DateOnly
+        nameWithType: DateOnly
+        qualifiedName: DateOnly
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: List`1
+    commentId: '!:List{DateOnly}'
+  DryCleaning.Service.ShopService.AddDates*:
+    name:
+      CSharp:
+      - id: DryCleaning.Service.ShopService.AddDates*
+        name: AddDates
+        nameWithType: ShopService.AddDates
+        qualifiedName: DryCleaning.Service.ShopService.AddDates
+      VB:
+      - id: DryCleaning.Service.ShopService.AddDates*
+        name: AddDates
+        nameWithType: ShopService.AddDates
+        qualifiedName: DryCleaning.Service.ShopService.AddDates
+    isDefinition: true
+    commentId: Overload:DryCleaning.Service.ShopService.AddDates
+  DryCleaning.Service.ShopService:
+    name:
+      CSharp:
+      - id: DryCleaning.Service.ShopService
+        name: ShopService
+        nameWithType: ShopService
+        qualifiedName: DryCleaning.Service.ShopService
+      VB:
+      - id: DryCleaning.Service.ShopService
+        name: ShopService
+        nameWithType: ShopService
+        qualifiedName: DryCleaning.Service.ShopService
+    isDefinition: true
+    commentId: T:DryCleaning.Service.ShopService
+  DryCleaning.Service:
+    name:
+      CSharp:
+      - name: DryCleaning.Service
+        nameWithType: DryCleaning.Service
+        qualifiedName: DryCleaning.Service
+      VB:
+      - name: DryCleaning.Service
+        nameWithType: DryCleaning.Service
+        qualifiedName: DryCleaning.Service
+    isDefinition: true
+    commentId: N:DryCleaning.Service

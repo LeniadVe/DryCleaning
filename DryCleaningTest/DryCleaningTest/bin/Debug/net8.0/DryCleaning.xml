@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DryCleaning</name>
+    </assembly>
+    <members>
+        <member name="T:DryCleaning.Controllers.ShopController">
+            <summary>
+            API Controller for managing shop schedules, including setting open/close hours and calculating service completion times.
+            </summary>
+            <param name="shopService">Service for managing shop scheduling data and business logic.</param>
+        </member>
+        <member name="M:DryCleaning.Controllers.ShopController.#ctor(DryCleaning.Interfaces.IShopService)">
+            <summary>
+            API Controller for managing shop schedules, including setting open/close hours and calculating service completion times.
+            </summary>
+            <param name="shopService">Service for managing shop scheduling data and business logic.</param>
+        </member>
+        <member name="M:DryCleaning.Controllers.ShopController.DaysSchedule(System.String,System.String)">
+            <summary>
+            Sets the opening and closing hours for all weekdays uniformly.
+            </summary>
+            <param name="openingHour">The opening hour in "HH:mm" format.</param>
+            <param name="closingHour">The closing hour in "HH:mm" format.</param>
+            <returns>An HTTP response indicating success or failure in updating the schedule.</returns>
+        </member>
+        <member name="M:DryCleaning.Controllers.ShopController.Days(System.String,System.String,System.String)">
+            <summary>
+            Sets the opening and closing hours for a specific day of the week.
+            </summary>
+            <param name="dayOfWeek">The day of the week (e.g., "Monday", "Tuesday").</param>
+            <param name="openingHour">The opening hour in "HH:mm" format.</param>
+            <param name="closingHour">The closing hour in "HH:mm" format.</param>
+            <returns>An HTTP response indicating success or failure in updating the schedule for the specified day.</returns>
+        </member>
+        <member name="M:DryCleaning.Controllers.ShopController.Dates(System.String,System.String,System.String)">
+            <summary>
+            Sets the opening and closing hours for a specific date.
+            </summary>
+            <param name="date">The specific date in "yyyy-MM-dd" format.</param>
+            <param name="openingHour">The opening hour in "HH:mm" format.</param>
+            <param name="closingHour">The closing hour in "HH:mm" format.</param>
+            <returns>An HTTP response indicating success or failure in updating the schedule for the specified date.</returns>
+        </member>
+        <member name="M:DryCleaning.Controllers.ShopController.DaysClose(System.String)">
+            <summary>
+            Marks specific days of the week as closed.
+            </summary>
+            <param name="daysOfWeek">A comma-separated list of days of the week (e.g., "Sunday, Wednesday").</param>
+            <returns>An HTTP response indicating success or failure in updating the closed days schedule.</returns>
+        </member>
+        <member name="M:DryCleaning.Controllers.ShopController.DatesClose(System.String)">
+            <summary>
+            Marks specific dates as closed.
+            </summary>
+            <param name="dates">A comma-separated list of dates in "yyyy-MM-dd" format.</param>
+            <returns>An HTTP response indicating success or failure in updating the closed dates schedule.</returns>
+        </member>
+        <member name="M:DryCleaning.Controllers.ShopController.Get(System.Int32,System.String)">
+            <summary>
+            Calculates the estimated completion date and time for a service based on the given duration and start date.
+            </summary>
+            <param name="minutes">The duration of the service in minutes.</param>
+            <param name="date">The start date and time in "yyyy-MM-dd HH:mm" format.</param>
+            <returns>The calculated completion date and time, or an error message if input is invalid.</returns>
+        </member>
+        <member name="T:DryCleaning.DTO.Shop">
+            <summary>
+            Represents the schedule configuration for a shop, including working hours for each day of the week
+            and specific dates with custom opening and closing times.
+            </summary>
+            <remarks>
+            The <see cref="P:DryCleaning.DTO.Shop.Week"/> property contains daily hours keyed by day of the week, while 
+            <see cref="P:DryCleaning.DTO.Shop.Dates"/> allows specific date-based overrides for opening and closing times. 
+            Uses <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2"/> to ensure thread-safe access and modification.
+            </remarks>
+        </member>
+        <member name="P:DryCleaning.DTO.Shop.Week">
+            <summary>
+            Represents the working hours for each day of the week, stored as a dictionary where the key is the day of the week
+            and the value is the <see cref="T:DryCleaning.DTO.WorkHours"/> for that day.
+            </summary>
+            <remarks>
+            This property is used to define the typical working hours of the shop, which are the same for each week.
+            The dictionary is thread-safe, allowing concurrent access and modification.
+            </remarks>
+        </member>
+        <member name="P:DryCleaning.DTO.Shop.Dates">
+            <summary>
+            Represents the custom working hours for specific dates, stored as a dictionary where the key is the specific date
+            and the value is the <see cref="T:DryCleaning.DTO.WorkHours"/> for that date.
+            </summary>
+            <remarks>
+            This property allows setting specific working hours for dates that may differ from the regular weekly schedule.
+            The dictionary is thread-safe, allowing concurrent access and modification.
+            </remarks>
+        </member>
+        <member name="T:DryCleaning.DTO.WorkHours">
+            <summary>
+            Represents the working hours for a specific period, including the opening and closing times.
+            </summary>
+            <remarks>
+            This class holds two properties, <see cref="P:DryCleaning.DTO.WorkHours.Open"/> and <see cref="P:DryCleaning.DTO.WorkHours.Close"/>, 
+            which define the start and end times of a work schedule. Both properties are nullable 
+            and default to <see cref="P:System.TimeOnly.MinValue"/> and <see cref="P:System.TimeOnly.MaxValue"/> respectively,
+            allowing for flexible scheduling.
+            </remarks>
+        </member>
+        <member name="P:DryCleaning.DTO.WorkHours.Open">
+            <summary>
+            Gets or sets the opening time for the work period.
+            </summary>
+            <remarks>
+            If not set explicitly, defaults to <see cref="P:System.TimeOnly.MinValue"/> (00:00:00).
+            </remarks>
+        </member>
+        <member name="P:DryCleaning.DTO.WorkHours.Close">
+            <summary>
+            Gets or sets the closing time for the work period.
+            </summary>
+            <remarks>
+            If not set explicitly, defaults to <see cref="P:System.TimeOnly.MaxValue"/> (23:59:59).
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:DryCleaning.Extensions.DateTimeExtension" -->
+        <member name="M:DryCleaning.Extensions.DateTimeExtension.ToDateAndHours(System.DateTime)">
+            <summary>
+            Converts a <see cref="T:System.DateTime"/> to a tuple containing a <see cref="T:System.DateOnly"/> 
+            (representing the date) and a <see cref="T:System.TimeOnly"/> (representing the time).
+            </summary>
+            <param name="dateTime">The <see cref="T:System.DateTime"/> value to convert.</param>
+            <returns>A tuple where the first item is a <see cref="T:System.DateOnly"/> representing the date, 
+            and the second item is a <see cref="T:System.TimeOnly"/> representing the time.</returns>
+        </member>
+        <member name="T:DryCleaning.Factories.ShopFactory">
+            <summary>
+            Factory class for creating and initializing instances of the <see cref="T:DryCleaning.DTO.Shop"/> class.
+            </summary>
+        </member>
+        <member name="M:DryCleaning.Factories.ShopFactory.InitializeWeek(DryCleaning.DTO.Shop)">
+            <summary>
+            Creates and returns an instance of <see cref="T:DryCleaning.DTO.Shop"/> with pre-initialized values.
+            Each day of the week is set with a default <see cref="T:DryCleaning.DTO.WorkHours"/> entry, 
+            ensuring a complete schedule structure from the start.
+            </summary>
+            <returns>An initialized <see cref="T:DryCleaning.DTO.Shop"/> instance with default values for each day of the week.</returns>
+        </member>
+        <member name="T:DryCleaning.Services.ShopService">
+            <summary>
+            Provides business logic for managing the store's schedule, including opening and closing hours
+            for specific dates and days of the week.
+            </summary>
+            <remarks>
+            This service allows updating, adding, and retrieving work hours for various days and dates.
+            It also calculates service completion times based on store hours.
+            </remarks>
+        </member>
+        <member name="M:DryCleaning.Services.ShopService.Get(System.Int32,System.DateTime)">
+            <summary>
+            Calculates the guaranteed completion date and time for a specified service duration, 
+            based on business hours starting from the provided date and time.
+            </summary>
+            <param name="minutes">Duration in minutes for service completion.</param>
+            <param name="startDate">The start date and time for calculating the completion date.</param>
+            <returns>A <see cref="T:LanguageExt.Common.Result`1"/> containing the completion date and time formatted as "ddd MMM dd HH:mm:ss yyyy".</returns>
+        </member>
+        <member name="M:DryCleaning.Services.ShopService.CalculateFinishDate(System.Int32,System.DateOnly,System.TimeOnly)">
+            <summary>
+            Recursively calculates the end date and time for a specified service duration
+            considering business hours. Advances to the next business day if necessary.
+            </summary>
+            <param name="minutes">Remaining duration in minutes to complete the service.</param>
+            <param name="date">The current date in the calculation.</param>
+            <param name="hour">The current time on the specified date in the calculation.</param>
+            <returns>A <see cref="T:System.DateTime"/> representing the calculated completion date and time.</returns>
+        </member>
+        <member name="M:DryCleaning.Services.ShopService.VerifySchedule(System.DateOnly)">
+            <summary>
+            Verifies if the store has any scheduled hours.
+            </summary>
+            <param name="date">The date to check against the store's schedule.</param>
+            <returns>
+            Returns <c>true</c> if there are valid hours for any day in the weekly schedule
+            or if there are specific dates with hours after the given date; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:DryCleaning.Services.ShopService.UpdateWeek(DryCleaning.DTO.WorkHours,System.Collections.Generic.List{System.DayOfWeek})">
+            <summary>
+            Updates the business hours for specified days of the week, or all days if no specific days are provided.
+            </summary>
+            <param name="newWorkHours">The new work hours to apply to the specified days.</param>
+            <param name="days">The days of the week to update. Updates all days if <c>null</c>.</param>
+            <returns>A <see cref="T:LanguageExt.Common.Result`1"/> indicating whether the update was successful for all specified days.</returns>
+        </member>
+        <member name="M:DryCleaning.Services.ShopService.UpdateWorkingHours(System.DayOfWeek,DryCleaning.DTO.WorkHours)">
+            <summary>
+            Updates the business hours for a specific day of the week in the store's schedule.
+            </summary>
+            <param name="dayOfWeek">The day of the week to update.</param>
+            <param name="newWorkHours">The new work hours for the specified day. If <c>null</c>, sets the day as closed.</param>
+            <returns>A <see cref="T:LanguageExt.Common.Result`1"/> indicating if the update was successful for the specified day.</returns>
+        </member>
+        <member name="M:DryCleaning.Services.ShopService.UpdateWorkingHours(System.Collections.Generic.KeyValuePair{System.DayOfWeek,DryCleaning.DTO.WorkHours},DryCleaning.DTO.WorkHours)">
+            <summary>
+            Updates the business hours for a given key-value pair representing a day and its current work hours.
+            </summary>
+            <param name="day">The day and its current work hours to update.</param>
+            <param name="newWorkHours">The new work hours for the specified day. If <c>null</c>, sets the day as closed.</param>
+            <returns>A <see cref="T:LanguageExt.Common.Result`1"/> indicating if the update was successful.</returns>
+        </member>
+        <member name="M:DryCleaning.Services.ShopService.AddDate(System.DateOnly,DryCleaning.DTO.WorkHours)">
+            <summary>
+            Adds or updates the business hours for a specific date in the store's calendar.
+            </summary>
+            <param name="date">The specific date to add or update.</param>
+            <param name="workHours">The work hours for the date. If <c>null</c>, the date is considered closed.</param>
+            <returns>A <see cref="T:LanguageExt.Common.Result`1"/> containing the added or updated <see cref="T:DryCleaning.DTO.WorkHours"/> for the date.</returns>
+        </member>
+        <member name="M:DryCleaning.Services.ShopService.AddDates(System.Collections.Generic.List{System.DateOnly},DryCleaning.DTO.WorkHours)">
+            <summary>
+            Adds or updates business hours for multiple specific dates in the store's calendar.
+            </summary>
+            <param name="dates">A list of dates to add or update.</param>
+            <param name="workHours">The work hours for each specified date. If <c>null</c>, each date is considered closed.</param>
+            <returns>A <see cref="T:LanguageExt.Common.Result`1"/> indicating whether all specified dates were successfully added or updated.</returns>
+        </member>
+    </members>
+</doc>
